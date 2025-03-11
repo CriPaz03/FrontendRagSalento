@@ -131,14 +131,14 @@ function AiChat() {
           {
             messages.length === 0 && (
               <div className="flex flex-wrap items-start gap-2 self-center">
-                <AiChatSuggestion text="Plan a relaxing day" onClick={async () => {
-                  await appendWithChatOptions({ content: "Could you help me plan a relaxing day that focuses on activities for rejuvenation? To start, can you ask me what my favorite forms of relaxation are?", role: 'user' })
+                <AiChatSuggestion text="Chi era Maria D'Enghien" onClick={async () => {
+                  await appendWithChatOptions({ content: "Parlami di Maria D'Enghien, la sua storia e cosa ha fatto", role: 'user' })
                 }} />
-                <AiChatSuggestion text="Thank my interviewer" onClick={async () => {
-                  await appendWithChatOptions({ content: "Write 2-3 sentences to thank my interviewer, reiterating my excitement for the job opportunity while keeping it cool. Don't make it too formal.", role: 'user' })
+                <AiChatSuggestion text="Chi era Maria D'Enghien" onClick={async () => {
+                  await appendWithChatOptions({ content: "Parlami di Maria D'Enghien, la sua storia e cosa ha fatto", role: 'user' })
                 }} />
-                <AiChatSuggestion text="Fun fact about Roman Empire" onClick={async () => {
-                  await appendWithChatOptions({ content: "Tell me a random fun fact about the Roman Empire", role: 'user' })
+                <AiChatSuggestion text="Chi era Maria D'Enghien" onClick={async () => {
+                  await appendWithChatOptions({ content: "Parlami di Maria D'Enghien, la sua storia e cosa ha fatto", role: 'user' })
                 }} />
               </div>
             )

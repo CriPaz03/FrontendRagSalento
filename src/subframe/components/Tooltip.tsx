@@ -1,8 +1,4 @@
 "use client";
-/*
- * Documentation:
- * Tooltip — https://app.subframe.com/ec98ea52812e/library?component=Tooltip_ccebd1e9-f6ac-4737-8376-0dfacd90c9f3
- */
 
 import React from "react";
 import * as SubframeCore from "@subframe/core";

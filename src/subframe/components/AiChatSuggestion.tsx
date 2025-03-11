@@ -1,8 +1,4 @@
 "use client";
-/*
- * Documentation:
- * AI Chat Suggestion — https://app.subframe.com/ec98ea52812e/library?component=AI+Chat+Suggestion_b66d445b-b9c7-4cf6-82e2-4f1130e68f92
- */
 
 import React from "react";
 import * as SubframeCore from "@subframe/core";

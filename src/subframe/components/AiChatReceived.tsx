@@ -1,10 +1,5 @@
 "use client";
-/*
- * Documentation:
- * AI Chat Received — https://app.subframe.com/ec98ea52812e/library?component=AI+Chat+Received_f3f2b42c-0949-4269-9ba9-0f247778a839
- * Icon with background — https://app.subframe.com/ec98ea52812e/library?component=Icon+with+background_c5d68c0e-4c0c-4cff-8d8c-6ff334859b3a
- * AI Chat Toolbar — https://app.subframe.com/ec98ea52812e/library?component=AI+Chat+Toolbar_e3cd651a-0a0f-441e-8ea8-b0fe066515e7
- */
+
 
 import React from "react";
 import * as SubframeCore from "@subframe/core";
