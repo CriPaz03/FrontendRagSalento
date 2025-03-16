@@ -13,7 +13,6 @@ export async function POST(req: Request) {
   const base_prompt = PROMPT_DICT[prompt as PROMPT] ?? PROMPT_DICT["Assistente esperto"];
   let fullPrompt = "";
   let current_message = messages[messages.length - 1].content;
-  console.log(base_prompt)
   try {
     const response = await fetch('https://api.vectorize.io/v1/org/e6ae581f-f84b-4a61-a5d3-6577191030a4/pipelines/aip098f7-e353-4183-a2f6-6d3d35c98192/retrieval', {
       method: 'POST',
