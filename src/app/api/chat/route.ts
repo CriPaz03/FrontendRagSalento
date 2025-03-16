@@ -10,8 +10,10 @@ if (!VECTORIZE_API_TOKEN) {
 
 export async function POST(req: Request) {
   const { messages, data: { model, prompt } } = await req.json();
-  const base_prompt = PROMPT_DICT[prompt as PROMPT] ?? PROMPT_DICT[1];
+  const base_prompt = PROMPT_DICT[prompt as PROMPT] ?? PROMPT_DICT["Assistente esperto"];
   let fullPrompt = "";
+  let current_message = messages[messages.length - 1].content;
+  console.log(base_prompt)
   try {
     const response = await fetch('https://api.vectorize.io/v1/org/e6ae581f-f84b-4a61-a5d3-6577191030a4/pipelines/aip098f7-e353-4183-a2f6-6d3d35c98192/retrieval', {
       method: 'POST',
@@ -20,7 +22,7 @@ export async function POST(req: Request) {
         'Authorization': VECTORIZE_API_TOKEN as string,
       },
       body: JSON.stringify({
-        question: messages[0].content,
+        question: current_message,
         numResults: 5,
         rerank: true
       })
@@ -44,7 +46,7 @@ export async function POST(req: Request) {
     ${base_prompt}
     ${chunksText}
     
-    Domanda: ${messages[0].content}
+    Domanda: ${current_message}
   
     Risposta:
     `;
@@ -52,7 +54,7 @@ export async function POST(req: Request) {
     console.error("Errore nella richiesta a Vectorize:", error);
   }
 
-  messages[0].content = fullPrompt;
+  messages[messages.length - 1].content = fullPrompt;
   const result = await streamText({
     model: openai(model) as any,
     messages: convertToCoreMessages(messages),

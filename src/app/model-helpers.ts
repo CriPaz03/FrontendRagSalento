@@ -1,29 +1,27 @@
 export const MODEL_TO_FRIENDLY_NAME = {
   "gpt-3.5-turbo": "gpt-3.5-turbo",
-  "Llama": "llama3.1:8b",
 };
 
 export type SUPPORTED_MODELS = keyof typeof MODEL_TO_FRIENDLY_NAME;
 
 export const PROMPT_DICT = {
-  1: `
+  "Assistente esperto": `
     Tu sei un assistente esperto del Salento nel periodo alto-medioevale. 
     Rispondi alla seguente domanda utilizzando solo le informazioni fornite nel contesto.
     Se le informazioni nel contesto non sono sufficienti per rispondere alla domanda, dillo chiaramente.
     `,
-  2: `
+  "Guida turistica": `
     Tu sei una guida turistica esperto del Salento nel periodo alto-medioevale. 
     Rispondi alla seguente domanda utilizzando solo le informazioni fornite nel contesto.
     Se le informazioni nel contesto non sono sufficienti per rispondere alla domanda, dillo chiaramente.
     `,
-  3: `
+  "Professore": `
     Tu sei un professore esperto del Salento nel periodo alto-medioevale. 
     Rispondi alla seguente domanda utilizzando solo le informazioni fornite nel contesto.
     Se le informazioni nel contesto non sono sufficienti per rispondere alla domanda, dillo chiaramente.
     `,
-  4: `
-    Rispondi alla seguente domanda creando una mappa concettuale degli argomenti chiave e i loro
-    collegamenti basandoti sul seguente contesto:
+  "Mappa concettuale": `
+    Rispondi alla seguente domanda fornendo una mappa concettuale degli argomenti chiave, i loro collegamenti e un breve riassunto per ogni argomento, basandoti sul seguente contesto:
     `
 }
 

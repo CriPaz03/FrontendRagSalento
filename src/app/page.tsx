@@ -13,12 +13,11 @@ import { AiChatSuggestion } from "@/subframe/components/AiChatSuggestion";
 import { TextField } from "@/subframe/components/TextField";
 import { useChat } from "@ai-sdk/react";
 import { MODEL_TO_FRIENDLY_NAME, PROMPT, SUPPORTED_MODELS } from "@/src/app/model-helpers";
-import { Group } from "@subframe/core/dist/cjs/components/radix/dropdown-menu";
 import GroupsPrompt from "../subframe/components/GroupsPrompt";
 
 function AiChat() {
   const [model, setModel] = useState<SUPPORTED_MODELS>("gpt-3.5-turbo");
-  const [prompt, setPrompt] = useState<PROMPT>(1);
+  const [prompt, setPrompt] = useState<PROMPT>("Assistente esperto");
   const { messages, setMessages, input, setInput, append } = useChat();
   const [attachment, setAttachment] = useState<Attachment | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
