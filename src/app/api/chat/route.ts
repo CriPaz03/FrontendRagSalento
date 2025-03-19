@@ -14,7 +14,7 @@ export async function POST(req: Request) {
   let fullPrompt = "";
   let current_message = messages[messages.length - 1].content;
   try {
-    const response = await fetch('https://api.vectorize.io/v1/org/e6ae581f-f84b-4a61-a5d3-6577191030a4/pipelines/aip098f7-e353-4183-a2f6-6d3d35c98192/retrieval', {
+    const response = await fetch('https://api.vectorize.io/v1/org/ec505dfb-79f7-47e9-ad71-5f33c1acf799/pipelines/aip67a39-7d51-48cc-82a9-8a8b8ab9b1f7/retrieval', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
